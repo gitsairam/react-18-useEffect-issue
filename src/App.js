@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useEvent } from 'react';
 import './style.css';
 
 export default function App() {
   const effect = useRef();
+  //solution1
   // useEffect(() => {
   //   if (effect.current) {
   //     return;
@@ -10,6 +11,8 @@ export default function App() {
   //   effect.current = true;
   //   console.log('effect called');
   // }, []);
+
+  //solution2
   useEffect(() => {
     console.log('effect called');
   }, []);
